@@ -1,0 +1,253 @@
+
+<!DOCTYPE html >
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="iif.css" rel="stylesheet" />
+
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+</head>
+<body bgcolor="#999999">
+
+
+<div class="row">
+
+<div id="header"  >
+<a href="assignment.html"><img src="Capture6.PNG"  /></a>
+ <img src="MEW.PNG"/  >
+ 
+ 
+ <div class="navbar" style="float:right;">
+  <a href="inquiry.html">Login</a>
+  <div class="navbar" style="float:right;">
+  <a href="inquiry.html">Register</a>
+  &nbsp;
+  <div class="navbar" style="float:right;">
+  <a href="inquiry.html">Feedback</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="row">
+<div class="topnav">
+
+
+      <div class="dropdown"  >
+    <button class="dropbtn" ><i class="fa fa-bars"></i>
+     
+    </button>
+    <div class="dropdown-content">
+      <a href="Products.html">PRODUCTS</a>
+      <a href="Services.html">SERVICES</a>
+      <a href="about.html">ABOUT</a>
+       <a href="location.html">LOCATION</a>
+    </div>
+  </div> 
+  
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+</div>
+<div class="row">
+&nbsp;
+</div>
+
+
+<!-- feedback form starts-->
+
+<div class="row">
+<form id="form1" name="form1" method="post" action="" >
+  <div align="center">
+    <h2>Customer Query Form
+    </h2>
+    <table width="500" border="0" style="background-color:#FFF">
+      <tr>
+        <th width="137" scope="row"><label for="fnam">
+          <div align="left">First Name </div>
+        </label>        </th>
+        <td width="336"><input name="fnam" type="text" id="fnam" maxlength="30" style="border-color:#000"/></td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="lnam">
+          <div align="left">Last Name </div>
+        </label></th>
+        <td><input name="lnam" type="text" id="lnam" maxlength="30" style="border-color:#000" /></td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="Pod"> 
+          <div align="left"> Address </div>
+        </label></th>
+        <td><input name="Pod" type="text" id="Pod" maxlength="30" style="border-color:#000"/></td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><div align="left">Gender</div></th>
+        <td><p>
+          <label>
+            <input type="radio" name="RadioGroup1" value="f" id="RadioGroup1_0" style="border-color:#000"/>
+            Female</label>
+          <label>
+            <input type="radio" name="RadioGroup1" value="m" id="RadioGroup1_1" style="border-color:#000"/>
+            Male</label>
+          <br />
+        </p></td>
+      </tr>
+      <tr>
+        <th scope="row"><div align="left">City</div></th>
+        <td><select name="city" id="city" style="border-color:#000">
+          <option value="c" selected="selected">Select</option>
+          <option value="k" >Kandy</option>
+          <option value="fg">Colombo</option>
+          <option value="d">Matara</option>
+        </select></td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><div align="left">E-mail</div></th>
+        <td><input name="fnam2" type="email" id="fnam2" maxlength="30" style="border-color:#000"/></td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="phon">
+          <div align="left">Mobile No</div>
+        </label></th>
+        <td><input name="phon" type="number" id="phon" maxlength="10" style="border-color:#000"/></td>
+      </tr>
+      <tr>
+        <th scope="row">&nbsp;</th>
+        <td><textarea name="ffeed" id="ffeed" cols="45" rows="5" style="border-color:#000">Enter Feedback </textarea></td>
+      </tr>
+      <tr>
+        <th scope="row"><input type="reset" name="rese" id="rese" value="Reset" style="border-color:#000" onClick="conform_box()"/></th>
+        <td><input type="submit" name="sub" id="sub" value="Submit"    style="border-color:#000" onClick="validate_form();"/></td>
+      </tr>
+      <tr>
+        <th scope="row">&nbsp;</th>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+  </div>
+</form>
+</div>
+
+<!-- script for feedbackform-->
+<script type="text/javascript">
+function conform_box()
+{
+	var r=confirm("Are you sure to reset!");
+	if (r==true)
+	{
+	alert("reset successfully");
+}
+
+	
+}
+</script>
+<script type="text/javascript">
+
+function validate_form()
+{
+	var valid=true;
+	var x = document.form1.phon.value;
+	if(document.form1.fnam.value=="")
+	{
+		alert("Please fill your first name");
+		document.form1.fnam.focus();
+		valid=false;
+		}
+		else if(document.form1.lnam.value=="")
+		{
+			alert("Please fill your last name ");
+			document.form1.lnam.focus();
+			valid=false;
+			
+			}
+			else if(document.form1.Pod.value=="")
+		{
+			alert("Please fill this field ");
+			document.form1.Pod.focus();
+			valid=false;
+			
+			}
+			else if(document.form1.RadioGroup1.value=="")
+		{
+			alert("Please select your gender ");
+			document.form1.RadioGroup1.focus();
+			valid=false;
+			
+			}
+			else if(document.form1.fnam2.value=="")
+		{
+			alert("Please enter your mail ");
+			document.form1.fnam2.focus();
+			valid=false;
+			
+			}
+			else if(document.form1.phon.value=="")
+		{
+			alert("Please type your phone number ");
+			document.form1.phon.focus();
+			valid=false;
+			
+			
+			}
+			else if (x.length<10 || x.length>10)
+           {
+                alert("Mobile Number should be  10 characters  ");
+				document.form1.phon.focus();
+				
+                return false;
+           }
+			return valid;
+	}
+</script>
+
+
+           
+
+           
+           
+
+
+
+<div id="footer">
+<br>
+  <p>Privacy Policies</p>
+    <p>Terms & Conditions</p>
+      <a href="Sitemap1.png" class="nounderline" style="color:#FFF"> <p>Site Map</p></a>
+      <a href="about.html" class="nounderline" style="color:#FFF"><p  style="padding-left:8em">Contact Us  &nbsp;&nbsp;<a href="WWW.facebook.com"><img src="facebook.PNG"  style="border-bottom:thick" width="30"/></a>&nbsp;&nbsp;<a href="WWW.twitter.com"><img src="twitter.PNG"  style="border-bottom:thick" width="30"/></a>&nbsp;&nbsp;<a href="WWW.instagram.com"><img src="insta.PNG"  style="border-bottom:thick" width="30"/></a>&nbsp;&nbsp;<a href="WWW.linkedin.com "><img src="linked.PNG"  style="border-bottom:thick" width="30"/></a></p>
+      <p align="right" style="font-size:12px">Website Design & Developed By @group3</p>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+b 
